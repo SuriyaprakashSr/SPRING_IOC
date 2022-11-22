@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+            <bean class="com.ty.foodorder.Customer" id="customer">
+            <constructor-arg name="id" value="101" />
+            <constructor-arg name="name" value="suriya" />
+            <constructor-arg name="address" value="blr" />
+            <constructor-arg name="phone" value="76543243 " />
+            <constructor-arg name="email" value="a@gmail.com" />
+            <constructor-arg name="password" value="ss234" /> 
+            </bean>
+            
+            <bean class="com.ty.foodorder.FoodOrder" id="foodorder">
+            <property name="id" value="1001" />
+              <property name="name" value="burger" />
+                <property name="totalCost" value="100" />
+                  <property name="hotelName" value="az hotel" />
+                    <property name="customer" ref="customer" />
+            </bean>
+            
+            
+            </beans>
+            
+            
+            
